@@ -1,0 +1,25 @@
+CREATE TABLE `t_order_0` (
+  `id` bigint NOT NULL,
+  `order_sn` varchar(64) NOT NULL,
+  `member_id` bigint NOT NULL,
+  `create_time` timestamp	NOT NULL,
+  `status` int DEFAULT 0 ,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_order_1` (
+  `id` bigint NOT NULL,
+  `order_sn` varchar(64) NOT NULL,
+  `member_id` bigint NOT NULL,
+  `create_time` timestamp	NOT NULL,
+  `status` int DEFAULT 0 ,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+CREATE TABLE `t_order_2` (
+  `id` bigint NOT NULL,
+  `order_sn` varchar(64) NOT NULL,
+  `member_id` bigint NOT NULL,
+  `create_time` timestamp	NOT NULL,
+  `status` int DEFAULT 0 ,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
