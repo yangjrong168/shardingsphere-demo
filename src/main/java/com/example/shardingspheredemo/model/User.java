@@ -2,24 +2,25 @@ package com.example.shardingspheredemo.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-@Entity(name="t_order")
-public class Order {
+@Entity(name = "t_user")
+public class User implements Serializable
+{
+    private static final long serialVersionUID = 1L;
     @Id
     private Long id;
-   // @Column(name = "user_id")
-    private Long userId;
 
-    private Integer amount;
+    private String nickName;
 
-    private Integer state;
+    private String mobile;
 
     private Date createTime;
 
     private Date updateTime;
+
 }

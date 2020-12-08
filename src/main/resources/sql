@@ -1,25 +1,340 @@
 CREATE TABLE `t_order_0` (
-  `id` bigint NOT NULL,
-  `order_sn` varchar(64) NOT NULL,
-  `member_id` bigint NOT NULL,
-  `create_time` timestamp	NOT NULL,
-  `status` int DEFAULT 0 ,
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_0` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
 
 CREATE TABLE `t_order_1` (
-  `id` bigint NOT NULL,
-  `order_sn` varchar(64) NOT NULL,
-  `member_id` bigint NOT NULL,
-  `create_time` timestamp	NOT NULL,
-  `status` int DEFAULT 0 ,
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_1` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
 CREATE TABLE `t_order_2` (
-  `id` bigint NOT NULL,
-  `order_sn` varchar(64) NOT NULL,
-  `member_id` bigint NOT NULL,
-  `create_time` timestamp	NOT NULL,
-  `status` int DEFAULT 0 ,
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_2` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_3` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_3` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_4` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_4` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_5` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_5` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+CREATE TABLE `t_order_6` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_6` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+CREATE TABLE `t_order_7` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_7` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+CREATE TABLE `t_order_8` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_8` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_9` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_9` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+
+CREATE TABLE `t_order_10` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_10` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+
+CREATE TABLE `t_order_11` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_11` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+
+CREATE TABLE `t_order_12` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_12` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_13` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_13` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_14` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_14` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+CREATE TABLE `t_order_15` (
+  `id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) NOT NULL COMMENT '用户id',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 待支付 1 已支付',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
+
+CREATE TABLE `t_order_product_15` (
+  `id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) NOT NULL COMMENT '订单id',
+  `product_id` bigint(20) NOT NULL COMMENT '商品id',
+  `num` int(11) NOT NULL COMMENT '数量',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `amount` int(11) NOT NULL COMMENT '金额 分',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单商品表';
+
+
+CREATE TABLE `t_product` (
+  `id` bigint(20) unsigned NOT NULL,
+  `name` varchar(50) NOT NULL COMMENT '商品名称',
+  `price` int(11) NOT NULL COMMENT '价格 分',
+  `stock` int(11) NOT NULL COMMENT '库存',
+  `state` tinyint(4) NOT NULL COMMENT '状态 0 下架 1 上架',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='商品表'
+
+
+CREATE TABLE `t_user` (
+  `id` bigint(20) unsigned NOT NULL,
+  `nick_name` varchar(50) NOT NULL COMMENT '用户昵称',
+  `mobile` char(11) NOT NULL COMMENT '手机',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COMMENT='用户表'
