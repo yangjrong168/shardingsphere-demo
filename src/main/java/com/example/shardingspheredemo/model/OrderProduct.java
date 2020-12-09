@@ -16,6 +16,8 @@ public class OrderProduct {
     private Long productId;
     private Integer amount;
 
+    private Long userId;
+
     private Integer num;
 
     private Integer price;

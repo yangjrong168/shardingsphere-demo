@@ -327,7 +327,7 @@ CREATE TABLE `t_product` (
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COMMENT='商品表'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='商品表'
 
 
 CREATE TABLE `t_user` (
@@ -337,4 +337,23 @@ CREATE TABLE `t_user` (
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '加入时间',
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COMMENT='用户表'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='用户表'
+
+
+
+alter table t_order_product_0 add user_id bigint not null;
+alter table t_order_product_1 add user_id bigint not null;
+alter table t_order_product_2 add user_id bigint not null;
+alter table t_order_product_3 add user_id bigint not null;
+alter table t_order_product_4 add user_id bigint not null;
+alter table t_order_product_5 add user_id bigint not null;
+alter table t_order_product_6 add user_id bigint not null;
+alter table t_order_product_7 add user_id bigint not null;
+alter table t_order_product_8 add user_id bigint not null;
+alter table t_order_product_9 add user_id bigint not null;
+alter table t_order_product_10 add user_id bigint not null;
+alter table t_order_product_11 add user_id bigint not null;
+alter table t_order_product_12 add user_id bigint not null;
+alter table t_order_product_13 add user_id bigint not null;
+alter table t_order_product_14 add user_id bigint not null;
+alter table t_order_product_15 add user_id bigint not null;
